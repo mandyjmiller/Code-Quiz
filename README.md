@@ -15,9 +15,7 @@ Create a code quiz that contains the following requirements:
 * A start button that when clicked a timer starts and the first question appears.
  
   * Questions contain buttons for each answer.
-  * 
   * When answer is clicked, the next question appears
-  * 
   * If the answer clicked was incorrect then subtract time from the clock
 
 * The quiz should end when all questions are answered or the timer reaches 0.
@@ -47,14 +45,16 @@ This week's challenge was difficult, so there was a lot of Googling and referrin
 
 Particular credit to the following sites and Channels for inspiration and detailed walk throughs :-) :
 https://www.youtube.com/watch?v=riDzcEQbX6k
+
 https://simplestepscode.com/javascript-quiz-tutorial
+
 https://webdesign.tutsplus.com/multiple-choice-quiz-app-with-javascript--cms-107756t
 
 
 
 Other Tutorials and base materials from  [Module 6 Challenge](https://bootcampspot.instructure.com/courses/5651/assignments/67068)
 
-... and the wider community at [StackOverflow](https://stackoverflow.com/questions/70879043/javascript-quiz-with-html-css) for general syntax and troubleshooting when tearing hair out. 
+... and the wider community at [StackOverflow](https://stackoverflow.com/questions/70879043/javascript-quiz-with-html-css) for general syntax and troubleshooting when losing the will to live. Thanks! 
 
 ## License
 
