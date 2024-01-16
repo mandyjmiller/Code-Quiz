@@ -26,6 +26,7 @@ Create a code quiz that contains the following requirements:
 ## Installation
 
 No particular installation requirements. Web page can be viewed using Chrome, Firefox, Safari or most other standard browser, using "Inspect" Console to see the output 
+The "Application" tab in Inspect can be used to see the scores which have been saved to LocalStorage.
 
 
 ## Usage 
