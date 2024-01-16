@@ -45,6 +45,7 @@ Shout out to the teaching team at EdX and fellow students for help and collabora
 This week's challenge was difficult, so there was a lot of Googling and referring to YouTube Tutorials.
 
 Particular credit to the following sites and Channels for inspiration and detailed walk throughs :-) :
+
 https://www.youtube.com/watch?v=riDzcEQbX6k
 
 https://simplestepscode.com/javascript-quiz-tutorial
