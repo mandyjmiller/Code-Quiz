@@ -12,7 +12,7 @@
 
 
 
-// FROM HTML Files
+// FROM HTML Files - I need these variables to correspond
 var timerEl = document.getElementById("time");
 var startButton = document.getElementById("start");
 var questionsContainer = document.getElementById("questions");
@@ -20,6 +20,10 @@ var endScreen = document.getElementById("end-screen");
 var finalScoreEl = document.getElementById("final-score");
 var initialsInput = document.getElementById("initials");
 var submitButton = document.getElementById("submit");
+
+// NOT SURE IF THESE WILL WORK BUT GIVE IT A GO.  ADDING SOUNDS TO ANSWERS
+var correctSound = new Audio("../sfx/correct.wav");
+var incorrectSound = new Audio("../sfx/incorrect.wav");
 
 //Need these to track questions and timer
 var currentQuestionIndex = 0;
@@ -33,7 +37,7 @@ startButton.addEventListener("click", startQuiz);
 
 // Function to start the quiz
 function startQuiz() {
-  time = 60; // Set initial time
+  time = 60; // Set initial time in seconds
   currentQuestionIndex = 0; //Display first Question
 
   // Hide start screen and show questions container
@@ -82,12 +86,14 @@ function startTimer() {
   }
 
   // Function to check the selected answer
+  // Note to self: Try to add the .wav files provided to alert correct and incorrect annsers
   function checkAnswer(choiceIndex) {
     var currentQuestion = questions[currentQuestionIndex];
 
     if (currentQuestion.correctIndex === choiceIndex) {
       // Correct answer, move to the next question
       displayFeedback("Correct! Now for your next question");
+      correctSound.play();
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         displayQuestion();
@@ -97,6 +103,7 @@ function startTimer() {
     } else {
       // If wrong answer, show message and deduct 10 secs
       displayFeedback("Incorrect! 10 seconds deducted from score");
+      incorrectSound.play();
       time -= 10;
     }
   }
@@ -119,7 +126,7 @@ function startTimer() {
     questionsContainer.classList.add("hide");
     endScreen.classList.remove("hide");
 
-    // Display final score
+    // Display final score - final score is based on the seconds remaining on the timer 
     finalScoreEl.textContent = time;
   }
 
