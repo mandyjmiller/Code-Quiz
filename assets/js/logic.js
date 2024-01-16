@@ -21,9 +21,6 @@ var finalScoreEl = document.getElementById("final-score");
 var initialsInput = document.getElementById("initials");
 var submitButton = document.getElementById("submit");
 
-// NOT SURE IF THESE WILL WORK BUT GIVE IT A GO.  ADDING SOUNDS TO ANSWERS
-var correctSound = new Audio("../sfx/correct.wav");
-var incorrectSound = new Audio("../sfx/incorrect.wav");
 
 //Need these to track questions and timer
 var currentQuestionIndex = 0;
@@ -93,7 +90,6 @@ function startTimer() {
     if (currentQuestion.correctIndex === choiceIndex) {
       // Correct answer, move to the next question
       displayFeedback("Correct! Now for your next question");
-      correctSound.play();
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         displayQuestion();
@@ -103,7 +99,6 @@ function startTimer() {
     } else {
       // If wrong answer, show message and deduct 10 secs
       displayFeedback("Incorrect! 10 seconds deducted from score");
-      incorrectSound.play();
       time -= 10;
     }
   }
